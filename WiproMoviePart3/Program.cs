@@ -415,6 +415,7 @@ namespace WiproMoviePart3
                             Console.WriteLine();
                         }
                         ChosenMovie = Console.ReadLine();
+
                         break;
                     case 2:
                         Screen scr = new Screen();
@@ -855,6 +856,11 @@ namespace WiproMoviePart3
             if (obj.ShowID == 0 || obj.CustomerName == "" || obj.NumberOfSeats <= 0 || obj.SeatType == "" || obj.Email == "")
             {
                 Console.WriteLine("Booking Details can't be empty");
+                Console.WriteLine(obj.ShowID);
+                Console.WriteLine(obj.CustomerName);
+                Console.WriteLine(obj.Email);
+                Console.WriteLine(obj.NumberOfSeats);
+                Console.WriteLine(obj.SeatType);
                 return -1;
             }
             else
@@ -1303,7 +1309,9 @@ namespace WiproMoviePart3
         #endregion
 
         public Show()
-        { }
+        {
+            ShowID = RandomGenerator.R.Next(10000);
+        }
         public Show(int MI, int TI, int SI, DateTime START, DateTime END, decimal PLAT, decimal GOLD, decimal SILVER)
         {
             ShowID = RandomGenerator.R.Next(10000);
