@@ -372,12 +372,12 @@ namespace WiproMoviePart3
             string ChosenMovie;
             Administrator adm = new Administrator();
 
-            string MovieName1 = "Shutter Island";
-            string Director1 = "Martin Scorsese";
-            string Producer1 = "Warner Brothers";
-            string Cast1 = "Leonardo DiCaprio, Mark Ruffalo, Ben Kingsley";
-            double Duration1 = 130;
-            string Story1 = "Follow the up-and-coming U.S. Marshal Teddy Deniels on his visit to the shutter island. Weird twists awaist";
+            string MovieName1 = "Kesari";
+            string Director1 = "Anurag Singh";
+            string Producer1 = "Dharma Productions";
+            string Cast1 = "Akshay, Parineeti";
+            double Duration1 = 180;
+            string Story1 = "Drama, History";
             string Type1 = "Running";
             Movie movie1 = new Movie(MovieName1, Director1, Producer1, Cast1, Duration1, Story1, Type1);
             adm.AddMovie(movie1);
@@ -1556,6 +1556,8 @@ namespace WiproMoviePart3
     {
         static void Main(string[] args)
         {
+            Theatre t1 = new Theatre("PVR", "Mumbai", "Cuffe Parade", 7);
+            t1.DisplayTheatreDetails();
             MovieTicketing MT = new MovieTicketing();
             string LoginType = MT.Login();
             if (LoginType == null || LoginType == "")
